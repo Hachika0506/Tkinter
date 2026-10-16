@@ -12,7 +12,7 @@ for student in range(1, n + 1):
     total += student
 print("Total =", total, "steps =", n)
 
-input("Double loop:"counts every single point. Press Enter to run")
+input("Double loop: counts every single point. Press Enter to run")
 total = 0
 steps = 0
 
@@ -24,5 +24,5 @@ print("Total =", total, "steps =", steps,"your guess was:", guess)
 
 input("Double loop at n = 4 took 10 steps. Watch it grow. Press Enter")
 for n in [10,100,1000]:
-input("n = " + str(n) + ". Press Enter to run")
-print ("steps = ", n * (n + 1) // 2)
+    input("n = " + str(n) + ". Press Enter to run")
+    print("steps =", n * (n + 1) // 2)
