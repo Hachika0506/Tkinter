@@ -1,6 +1,12 @@
 from tkinter import *
 from tkinter import messagebox
-from PIL import Image, ImageTk
+import importlib
+
+try:
+    Image = importlib.import_module("PIL.Image")
+    ImageTk = importlib.import_module("PIL.ImageTk")
+except ImportError:
+    Image = ImageTk = None
 
 # Setting up Main Window
 root = Tk()
@@ -9,12 +15,13 @@ root.configure(bg='light blue')
 root.geometry('650x400')
 
 # Adding Image and Labels in the Main Window
-upload = Image.open("app_img.jpg")
-# Resize the image using resize() method
-upload = upload.resize((300, 300))
-image = ImageTk.PhotoImage(upload)
-label = Label(root, image=image, bg='light blue')
-label.place(x=180, y=20)
+if Image is not None:
+    upload = Image.open("app_img.jpg")
+    # Resize the image using resize() method
+    upload = upload.resize((300, 300))
+    image = ImageTk.PhotoImage(upload)
+    label = Label(root, image=image, bg='light blue')
+    label.place(x=180, y=20)
 
 label1 = Label(root,
     text="Hey User! Welcome to Denomination Counter Application.",
