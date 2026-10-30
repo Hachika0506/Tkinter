@@ -7,7 +7,7 @@ b = num2
 i = 2
 lcm = 1
 
-while a > I or b > I:
+while a > i or b > i:
     if a % i == 0 or b % i == 0:
         lcm = lcm * i
 
