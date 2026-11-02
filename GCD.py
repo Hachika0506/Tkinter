@@ -5,4 +5,4 @@ while(numberSmallest):
     numberStore = numberSmallest
     numberSmallest = numberLargest % numberSmallest
     numberLargest = numberStore
-print("HCF is:", number largest)    
+print("HCF is:", numberLargest)    
