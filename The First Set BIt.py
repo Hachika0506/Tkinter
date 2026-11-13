@@ -3,7 +3,7 @@ print(" 5 -> binary:", bin(5)[2:],"first 1 at position 0")
 print(" 8 -> binary:", bin(8)[2:],"first 1 at position 3")
 
 n = int(input("Enter a number (try 8 or 14): "))
-input("watvh bits drop until the first 1 appears. Press Enter")
+input("watch bits drop until the first 1 appears. Press Enter")
 temp = n
 pos = 0
 while temp > 0:
